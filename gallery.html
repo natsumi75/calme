@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calme -private nail room-</title>
+    <link rel="shortcut icon" href="img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway+Dots&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="index.html" class="no-rotate"
+            ><span
+              ><img
+                src="img/logo-clear.png"
+                alt="calme -private nail room-" /></span
+          ></a>
+        </h1>
+        <nav class="header__nav">
+          <div class="header__nav-inner">
+            <a href="index.html" class="header__nav-logo no-rotate">
+              <img src="img/logo-clear.png" alt="calme -private nail room-" />
+            </a>
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="about.html"><span>ABOUT</span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="gallery.html"><span>GALLERY</span></a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="index.html#service"><span>SERVICE</span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="index.html#access"><span>ACCESS</span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="reserve.html"><span>RESERVE</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <button
+          class="header__hamburger js-hamburger"
+          type="button"
+          aria-label="メニューを開く"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main class="gallery">
+      <div class="mv-gallery">
+        <div class="mv__img">
+          <img src="./img/gallery.jpeg" alt="" />
+        </div>
+        <h1 class="mv-gallery__title">GALLERY</h1>
+      </div>
+      <div class="inner">
+        <div class="gallery__container">
+          <form
+            method="get"
+            action=""
+            class="gallery__container-form"
+            id="galleryFilterForm"
+          >
+            <div class="select-wrap">
+              <select name="design" id="designSelect">
+                <option value="" selected disabled hidden>Design</option>
+                <option value="all">ALL</option>
+                <option value="Simple(90min)">Simple(90min)</option>
+                <option value="Design(120min)">Design(120min)</option>
+                <option value="Full-Art(150min)">Full-Art(150min)</option>
+                <option value="ニュアンス">ニュアンス</option>
+                <option value="ワンカラー">ワンカラー</option>
+                <option value="グラデーション">グラデーション</option>
+                <option value="フレンチ">フレンチ</option>
+                <option value="ケア">ケア</option>
+              </select>
+            </div>
+            <div class="select-wrap">
+              <select name="price" id="priceSelect">
+                <option value="" selected disabled hidden>Price</option>
+                <option value="all">ALL</option>
+                <option value="6000">~¥6000</option>
+                <option value="7000">~¥7000</option>
+                <option value="8000">~¥8000</option>
+                <option value="9000">~¥9000</option>
+                <option value="10000">~¥10000</option>
+              </select>
+            </div>
+          </form>
+          <div class="gallery__container-list">
+            <div class="gallery__list" id="galleryList">
+              <article
+                class="gallery-card"
+                data-design="Design(120min)"
+                data-price="9000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail1.JPEG"
+                  data-title="Design(120min)"
+                  data-price="¥9000"
+                >
+                  <img src="./img/nail1.JPEG" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="ワンカラー"
+                data-price="7000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail24.JPEG"
+                  data-title="ワンカラー"
+                  data-price="¥7000"
+                >
+                  <img src="./img/nail24.JPEG" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="Design(120min)"
+                data-price="9000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/slide2.JPG"
+                  data-title="Design(120min)"
+                  data-price="¥9000"
+                >
+                  <img src="./img/slide2.JPG" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="Simple(90min)"
+                data-price="8000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail34.JPG"
+                  data-title="Simple (90min)"
+                  data-price="¥8000"
+                >
+                  <img src="./img/nail34.JPG" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="ワンカラー"
+                data-price="7000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail33.JPEG"
+                  data-title="ワンカラー"
+                  data-price="¥7000"
+                >
+                  <img src="./img/nail33.JPEG" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="Design(120min)"
+                data-price="9000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail31.jpg"
+                  data-title="Design(120min)"
+                  data-price="¥9000"
+                >
+                  <img src="./img/nail31.jpg" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="Simple(90min)"
+                data-price="8000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail45.jpeg"
+                  data-title="Simple(90min)"
+                  data-price="¥8000"
+                >
+                  <img src="./img/nail45.jpeg" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="Design(90min)"
+                data-price="9000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail42.JPEG"
+                  data-title="Design(90min)"
+                  data-price="¥9000"
+                >
+                  <img src="./img/nail42.JPEG" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="Simple(90min)"
+                data-price="8000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail35.JPG"
+                  data-title="Simple(90min)"
+                  data-price="¥8000"
+                >
+                  <img src="./img/nail35.JPG" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="Design(120min)"
+                data-price="9000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail38.JPEG"
+                  data-title="Design(120min)"
+                  data-price="¥9000"
+                >
+                  <img src="./img/nail38.JPEG" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="Simple(90min)"
+                data-price="8000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail19.jpg"
+                  data-title="Simple(90min)"
+                  data-price="¥8000"
+                >
+                  <img src="./img/nail19.jpg" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="Full-Art(150min)"
+                data-price="10000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail32.JPEG"
+                  data-title="Full-Art(150min)"
+                  data-price="¥10000"
+                >
+                  <img src="./img/nail32.JPEG" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="Design(120min)"
+                data-price="9000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/nail30.jpg"
+                  data-title="Design(120min)"
+                  data-price="¥9000"
+                >
+                  <img src="./img/nail30.jpg" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="Full-Art(150min)"
+                data-price="10000"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  type="button"
+                  data-image="./img/slide5.JPEG"
+                  data-title="Full-Art(150min)"
+                  data-price="¥10000"
+                >
+                  <img src="./img/slide5.JPEG" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="ネイルケア"
+                data-price="3500"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  data-image="./img/nail28.jpg"
+                  data-title="ネイルケア"
+                  data-price="¥3500"
+                >
+                  <img src="./img/nail28.jpg" alt="シンプルネイル" />
+                </button>
+              </article>
+              <article
+                class="gallery-card"
+                data-design="グラデーション"
+                data-price="7500"
+              >
+                <button
+                  class="gallery-card__button js-gallery-open"
+                  data-image="./img/nail11.jpg"
+                  data-title="グラデーション"
+                  data-price="¥7500"
+                >
+                  <img src="./img/nail11.jpg" alt="シンプルネイル" />
+                </button>
+              </article>
+            </div>
+          </div>
+        </div>
+        <p id="noResultMessage" style="display: none">
+          該当するデザインがありません。
+        </p>
+        <div class="gallery-modal" id="gallery-modal" hidden>
+          <div class="gallery-modal__overlay"></div>
+
+          <div class="gallery-modal__content">
+            <button
+              class="gallery-modal__close"
+              type="button"
+              aria-label="モーダルを閉じる"
+            >
+              ×
+            </button>
+            <div class="gallery-modal__image">
+              <img id="gallery-modal-image" src="" alt="" />
+            </div>
+            <div class="gallery-modal__body">
+              <h3 id="gallery-modal-title"></h3>
+              <p id="gallery-modal-design"></p>
+              <p id="gallery-modal-price"></p>
+              <p id="gallery-modal-description"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer--left">
+          <a href="index.html" class="no-rotate"
+            ><span><img src="./img/logo-clear.png" alt="" /></span
+          ></a>
+          <div class="logo">
+            <a href="#" class="no-rotate"
+              ><span><img src="./img/instagram.png" alt="" /></span
+            ></a>
+            <a href="#" class="no-rotate"
+              ><span><img src="./img/line.png" alt="" /></span
+            ></a>
+          </div>
+        </div>
+        <div class="footer--right">
+          <ul class="footer__link">
+            <li>
+              <a href="about.html"><span>ABOUT</span></a>
+            </li>
+            <li>
+              <a href="gallery.html"><span>GALLERY</span></a>
+            </li>
+            <li>
+              <a href="index.html#service"><span>SERVICE</span></a>
+            </li>
+            <li>
+              <a href="index.html#access"><span>ACCESS</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; calme All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

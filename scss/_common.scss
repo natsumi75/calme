@@ -1,0 +1,164 @@
+@use "variables" as *;
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $main-color;
+
+  & span {
+    display: inline-block;
+    transition: 1.5s;
+  }
+
+  &:hover span {
+    transform: rotateX(360deg);
+  }
+
+  // 👇回転させないやつ
+  &.no-rotate {
+    transition: opacity 0.5s ease;
+    span {
+      transform: none !important;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:hover span {
+      transform: none;
+    }
+  }
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.pc-none {
+  display: none;
+}
+
+.sp-only {
+  display: none;
+}
+
+.inner {
+  padding: 20rem 10rem 15rem;
+}
+
+.inner-wide {
+  padding-block: 25rem;
+}
+
+.inner-sp {
+  padding: 7rem 2rem;
+}
+
+.section__title {
+  font-family: $font-family-en;
+  font-size: 48px;
+  letter-spacing: 9.6px;
+  padding: 8px 8px 8px 50px;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+
+  .diamond {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    z-index: -1;
+
+    path {
+      fill: none;
+      stroke: $main-color;
+      stroke-width: 1;
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      transition: stroke-dashoffset 2s cubic-bezier(0.45, 0.35, 0.35, 1);
+    }
+  }
+
+  &.is-active {
+    .diamond path {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+.underline {
+  text-decoration: underline solid 1px;
+}
+
+.button {
+  font-size: 36px;
+  background: $brown;
+  border-radius: 1rem;
+  padding: 1.5rem 8rem;
+}
+
+// スクロールフェードイン
+.js-fadein {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.button-more {
+  font-family: $font-family-en;
+  margin: 0 auto;
+  filter: drop-shadow(4px 4px 4px $main-color);
+}
+.strong {
+  color: $orange;
+}
+
+@media (max-width: 768px) {
+  .pc-none {
+    display: block;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  .inner {
+    padding: 7rem 2rem 6rem;
+  }
+
+  .inner-wide {
+    padding-block: 7rem;
+  }
+
+  .section__title {
+    font-size: 3rem;
+    letter-spacing: 4px;
+    padding: 6px 6px 6px 36px;
+
+    .diamond {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  .button {
+    font-size: 2rem;
+    padding: 1.2rem 4rem;
+  }
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calme -private nail room-</title>
+    <link rel="shortcut icon" href="img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway+Dots&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="index.html" class="no-rotate"
+            ><span
+              ><img
+                src="img/logo-clear.png"
+                alt="calme -private nail room-" /></span
+          ></a>
+        </h1>
+        <nav class="header__nav">
+          <div class="header__nav-inner">
+            <a href="index.html" class="header__nav-logo no-rotate">
+              <img src="img/logo-clear.png" alt="calme -private nail room-" />
+            </a>
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="about.html"><span>ABOUT</span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="gallery.html"><span>GALLERY</span></a>
+              </li>
+
+              <li class="header__nav-item">
+                <a href="index.html#service"><span>SERVICE</span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="index.html#access"><span>ACCESS</span></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="reserve.html"><span>RESERVE</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <button
+          class="header__hamburger js-hamburger"
+          type="button"
+          aria-label="メニューを開く"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="mv-reserve">
+        <div class="mv__img">
+          <img src="./img/reserve.jpg" alt="" />
+        </div>
+        <h1 class="mv-reserve__title">RESERVE</h1>
+      </div>
+      <div class="reserve-contents__wrapper">
+        <div class="reserve-contents--top">
+          <section id="line" class="line">
+            <div class="inner-sp">
+              <h3 class="section__title">
+                LINE
+                <svg class="diamond" viewBox="0 0 100 100">
+                  <path d="M70 20 L50 0 L0 50 L50 100 L70 80" />
+                </svg>
+              </h3>
+              <div class="line__box">
+                <div class="box-top">
+                  <img src="img/Line.png" alt="" />
+                  <p class="line__text">こちらよりご登録お願いします。</p>
+                </div>
+                <p class="line__text">
+                  トーク画面からご希望の日時をご連絡ください。<br />第1〜第3希望までお送りいただけますとスムーズです。<br />ご質問などもお気軽にメッセージをお送りください。<br />24時間受け付けております。
+                </p>
+              </div>
+            </div>
+          </section>
+          <section id="tel" class="tel">
+            <div class="inner-sp">
+              <h3 class="section__title">
+                TEL
+                <svg class="diamond" viewBox="0 0 100 100">
+                  <path d="M70 20 L50 0 L0 50 L50 100 L70 80" />
+                </svg>
+              </h3>
+              <div class="tel__box">
+                <div class="box-top">
+                  <p class="tel__text--large">TEL 000-0000-0000</p>
+                </div>
+                <p class="tel__text">
+                  営業時間内にて承っております。<br />
+                  営業時間:10:00~19:00<br />施術中はお電話に出られない場合がございます。<br />当日のご予約の確認はお電話でお願いいたします。
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section id="mail" class="mail">
+          <div class="inner-sp">
+            <h3 class="section__title">
+              MAIL
+              <svg class="diamond" viewBox="0 0 100 100">
+                <path d="M70 20 L50 0 L0 50 L50 100 L70 80" />
+              </svg>
+            </h3>
+            <div class="contact__box">
+              <form class="contact__form">
+                <div class="contact__fields">
+                  <div class="contact__field">
+                    <div class="form-field">
+                      <div class="form-field__head">
+                        <label for="your-name" class="form-field__label"
+                          >お名前</label
+                        >
+                        <span class="form-field__tag">＊</span>
+                      </div>
+                      <div class="form-field__item">
+                        <input
+                          class="form-text"
+                          type="text"
+                          name="your-name"
+                          id="your-name"
+                          placeholder="佐藤 花琉夢"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact__field">
+                    <div class="form-field">
+                      <div class="form-field__head">
+                        <label for="your-name" class="form-field__label"
+                          >ふりがな</label
+                        >
+                        <span class="form-field__tag">＊</span>
+                      </div>
+                      <div class="form-field__item">
+                        <input
+                          class="form-text"
+                          type="text"
+                          name="your-kana"
+                          id="your-name"
+                          placeholder="さとう かるむ"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact__field">
+                    <div class="form-field">
+                      <div class="form-field__head">
+                        <label for="your-email" class="form-field__label"
+                          >電話番号</label
+                        >
+                        <span class="form-field__tag">＊</span>
+                      </div>
+                      <div class="form-field__item">
+                        <input
+                          class="form-text"
+                          type="email"
+                          name="your-phone"
+                          id="your-email"
+                          placeholder="000-0000-0000"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact__field">
+                    <div class="form-field">
+                      <div class="form-field__head">
+                        <label for="your-email" class="form-field__label"
+                          >メールアドレス</label
+                        >
+                        <span class="form-field__tag">＊</span>
+                      </div>
+                      <div class="form-field__item">
+                        <input
+                          class="form-text"
+                          type="email"
+                          name="your-email"
+                          id="your-email"
+                          placeholder="info@calme.com"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact__field">
+                    <div class="contact__field">
+                      <div class="form-field">
+                        <div class="form-field__head">
+                          <label for="your-message" class="form-field__label"
+                            >ご希望の日時</label
+                          >
+                          <span class="form-field__tag">＊</span>
+                        </div>
+                        <div class="form-field__item">
+                          <textarea
+                            name="your-message"
+                            id="your-date"
+                            class="form-textarea"
+                            cols="30"
+                            rows="10"
+                            placeholder="1月10日午後、1月15日10時以降"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact__field">
+                    <div class="contact__field">
+                      <div class="form-field">
+                        <div class="form-field__head">
+                          <label for="your-message" class="form-field__label"
+                            >ご希望の<br />施術内容</label
+                          >
+                          <span class="form-field__tag">＊</span>
+                        </div>
+                        <div class="form-field__item">
+                          <textarea
+                            name="your-message"
+                            id="your-message"
+                            class="form-textarea"
+                            cols="30"
+                            rows="10"
+                            placeholder="オフとワンカラー"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__privacy">
+                  <label class="form-checkbox">
+                    <input
+                      class="form-checkbox__input"
+                      type="checkbox"
+                      name="your-privacy"
+                    />
+                    <span class="form-checkbox__text"
+                      ><a href="" target="_blank">キャンセルポリシー</a
+                      >に同意する</span
+                    ></label
+                  >
+                </div>
+                <div class="contact__button">
+                  <button type="submit" class="button button-mail">
+                    <span>送信</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer--left">
+          <a href="index.html" class="no-rotate"
+            ><span><img src="./img/logo-clear.png" alt="" /></span
+          ></a>
+          <div class="logo">
+            <a href="#" class="no-rotate"
+              ><span><img src="./img/instagram.png" alt="" /></span
+            ></a>
+            <a href="#" class="no-rotate"
+              ><span><img src="./img/line.png" alt="" /></span
+            ></a>
+          </div>
+        </div>
+        <div class="footer--right">
+          <ul class="footer__link">
+            <li>
+              <a href="about.html"><span>ABOUT</span></a>
+            </li>
+            <li>
+              <a href="gallery.html"><span>GALLERY</span></a>
+            </li>
+            <li>
+              <a href="index.html#service"><span>SERVICE</span></a>
+            </li>
+            <li>
+              <a href="index.html#access"><span>ACCESS</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; calme All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

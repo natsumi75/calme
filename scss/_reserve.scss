@@ -1,0 +1,326 @@
+@use "variables" as *;
+
+.mv-reserve {
+  position: relative;
+
+  .mv__img {
+    width: 100%;
+    height: 500px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $bg1;
+    font-family: $font-family-sec;
+    font-size: 128px;
+    font-weight: 400;
+  }
+}
+.reserve-contents__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin-block: 20rem;
+  padding-inline: 4rem;
+
+  .reserve-contents--top {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+
+    .line {
+      flex: 1;
+      min-width: 0;
+      max-width: 45rem;
+      border-radius: 10px;
+      background: $bg2;
+      box-shadow: 4px 4px 4px 0 #d9d9d9;
+
+      &__box {
+        text-align: center;
+
+        .box-top {
+          margin-bottom: 5rem;
+
+          & img {
+            width: 80px;
+            height: 80px;
+            margin-top: 5rem;
+            margin-inline: auto;
+          }
+        }
+
+        .line__text {
+          text-align: center;
+          line-height: 40px;
+          margin-bottom: 5rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .tel {
+      flex: 1;
+      min-width: 0;
+      max-width: 45rem;
+      border-radius: 10px;
+      background: $bg2;
+      box-shadow: 4px 4px 4px 0 #d9d9d9;
+
+      &__box {
+        text-align: center;
+
+        .box-top {
+          margin-bottom: 5rem;
+
+          .tel__text--large {
+            font-size: 32px;
+            font-weight: 700;
+            margin-block: 5rem;
+            line-height: 12rem;
+          }
+        }
+
+        .tel__text {
+          text-align: center;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.mail {
+  border-radius: 10px;
+  background: $bg2;
+  box-shadow: 4px 4px 4px 0 #d9d9d9;
+  max-width: 95rem;
+  width: 100%;
+  margin-inline: auto; // ←中央寄せも追加！
+
+  .inner-sp {
+    padding: 7rem 2rem;
+  }
+
+  .contact__form {
+    margin-top: 50px;
+    max-width: 612px;
+    margin-inline: auto;
+  }
+
+  .contact__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form-field {
+    display: flex;
+    gap: 32px;
+
+    &__head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3px;
+      width: 30%;
+      flex-shrink: 0;
+    }
+
+    &__tag {
+      display: inline-block;
+      color: $orange;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    &__item {
+      flex-grow: 1;
+    }
+  }
+
+  .form-text {
+    width: 100%;
+    border: 1px solid $main-color;
+    background: $bg1;
+    border-radius: 10px;
+    padding: 12px 13px;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      border-color: $orange;
+      outline: none;
+    }
+  }
+
+  .form-textarea {
+    width: 100%;
+    border: 1px solid $main-color;
+    background: $bg1;
+    border-radius: 10px;
+    height: 100px;
+    padding: 13px;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      border-color: $orange;
+      outline: none;
+    }
+  }
+
+  .contact__privacy {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .form-checkbox {
+    &:hover {
+      .form-checkbox__text::before {
+        border-color: $orange;
+      }
+    }
+
+    &__input {
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+
+      &:checked + .form-checkbox__text::after {
+        opacity: 1;
+      }
+
+      &:focus + .form-checkbox__text::before {
+        border-color: $orange;
+      }
+    }
+
+    &__text {
+      position: relative;
+      padding-left: 30px;
+      font-size: 14px;
+      font-weight: 700;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::before {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $main-color;
+      }
+
+      &::after {
+        width: 23px;
+        height: 17.53px;
+        background: url(../img/check-icon.png) no-repeat center / contain;
+        opacity: 0;
+      }
+
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .contact__button {
+    margin-top: 35px;
+    text-align: center;
+
+    .button-mail {
+      font-size: 20px;
+      filter: drop-shadow(4px 4px 4px $main-color);
+
+      & span {
+        display: inline-block;
+        transition: 1.5s;
+      }
+
+      &:hover span {
+        transform: rotateX(360deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mv-reserve {
+    .mv__img {
+      height: 28rem;
+    }
+
+    &__title {
+      font-size: 5rem;
+      bottom: -16px;
+    }
+  }
+
+  .reserve-contents__wrapper {
+    margin-block: 8rem;
+    padding-inline: 2rem;
+
+    .reserve-contents--top {
+      flex-direction: column;
+      width: 100%;
+      gap: 3rem;
+
+      .line,
+      .tel {
+        width: 100%;
+        max-width: none;
+
+        .box-top {
+          margin-bottom: 3rem;
+
+          .tel__text--large {
+            margin-block: 2rem;
+          }
+        }
+
+        .line__text,
+        .tel__text {
+          font-size: 1.4rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+
+    .mail {
+      .form-field {
+        flex-direction: column;
+        gap: 8px;
+
+        &__head {
+          width: 100%;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}

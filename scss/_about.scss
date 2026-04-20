@@ -1,0 +1,214 @@
+@use "variables" as *;
+
+.mv-about {
+  position: relative;
+
+  .mv__img {
+    width: 100%;
+    height: 500px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $bg1;
+    font-family: $font-family-sec;
+    font-size: 128px;
+    font-weight: 400;
+  }
+}
+
+.philosophy__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 10rem 5rem;
+
+  .philosophy__wrapper--left {
+    font-size: 20px;
+    line-height: 50px;
+    letter-spacing: 4px;
+
+    .philosophy__text {
+      text-align: center;
+      padding-bottom: 3rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  & img {
+    max-height: 40rem;
+    border-radius: 1rem;
+  }
+}
+
+.our-style {
+  background: linear-gradient(
+    180deg,
+    #fefbf7 0%,
+    #f3ede6 10%,
+    #f3ede6 90%,
+    #fefbf7 100%
+  );
+
+  .our-style__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 10rem 5rem;
+
+    .our-style__wrapper--top {
+      font-size: 20px;
+      line-height: 50px;
+      letter-spacing: 4px;
+
+      .our-style__text {
+        text-align: center;
+        padding-bottom: 3rem;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    & img {
+      max-height: 40rem;
+      border-radius: 1rem;
+    }
+  }
+}
+.message__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 10rem 5rem;
+
+  .message__wrapper--left {
+    text-align: center;
+
+    & img {
+      width: 35rem;
+      height: 40rem;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    & dl {
+      display: grid;
+      grid-template-columns: 5rem auto;
+      margin: 0.7rem auto 0;
+      width: fit-content;
+      gap: 0.2rem;
+
+      & dt {
+        text-align: left;
+      }
+
+      & dd {
+        text-align: left;
+      }
+    }
+  }
+
+  .message__wrapper--right {
+    font-size: 20px;
+    line-height: 50px;
+    letter-spacing: 4px;
+
+    .message__text {
+      text-align: center;
+      padding-bottom: 3rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mv-about {
+    .mv__img {
+      height: 28rem;
+    }
+
+    &__title {
+      font-size: 5rem;
+      bottom: -16px;
+    }
+  }
+
+  .philosophy__wrapper {
+    flex-direction: column;
+    padding: 6rem 2rem;
+    gap: 3rem;
+
+    .philosophy__wrapper--left {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    & img {
+      max-height: none;
+      width: 100%;
+      height: 24rem;
+      object-fit: cover;
+    }
+  }
+
+  .our-style .our-style__wrapper {
+    padding: 6rem 2rem;
+    gap: 3rem;
+
+    .our-style__wrapper--top {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    & img {
+      max-height: none;
+      width: 100%;
+      height: 24rem;
+      object-fit: cover;
+    }
+  }
+
+  .message__wrapper {
+    flex-direction: column;
+    padding: 6rem 2rem;
+    gap: 3rem;
+
+    .message__wrapper--left {
+      font-size: 1.4rem;
+
+      & img {
+        width: 100%;
+        height: 28rem;
+      }
+    }
+
+    .message__wrapper--right {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      letter-spacing: 2px;
+    }
+  }
+}
